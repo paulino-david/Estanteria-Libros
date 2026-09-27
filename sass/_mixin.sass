@@ -1,12 +1,6 @@
-@mixin justufy($direccion:row,$tipo)
+@mixin flex($direccion:row,$align:normal,$justify:normal)
     display: flex
     flex-direction: $direccion
-    justify-content: $tipo
+    justify-content: $justify
+    align-items: $align
 
-@mixin alignItm($direccion:row,$tipo)
-    display: flex
-    flex-direction: $direccion
-    align-items: $tipo
-    
-
-    
