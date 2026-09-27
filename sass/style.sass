@@ -1,0 +1,92 @@
+@use "./_mixin"
+@use "./_variables"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Poppins", sans-serif
+
+
+main
+    @include mixin.justufy($tipo:center)
+    height: 100dvh
+    width: 100%
+    @include mixin.alignItm($tipo:center )
+    background-color: #060606f1
+
+
+.formulario
+    height: 50%
+    box-shadow: variables.$shadow
+    border-radius: variables.$borde-div
+    padding: variables.$padding-div+1rem
+    display: flex
+    flex-direction: row
+    background-color: #00000095
+    width: 50%
+
+.comunicado
+    width: 55%
+    @include mixin.alignItm($tipo:center )
+    @include mixin.justufy($direccion:column,$tipo:center)
+    background-color: #f5f5f5d9
+    border-radius: variables.$borde-$comun
+    padding: .5rem
+
+    h1
+        text-align: center
+
+    p
+        width: 100%
+        text-align: center
+        color: #00000059
+
+form
+    @include mixin.justufy($tipo:space-between )
+    flex-direction: column
+    width: 50%
+    padding: 1rem
+    color: #f5f5f5
+
+    h1
+        width: 100%
+        @include mixin.justufy($tipo:center )
+    
+    .inputs
+        height: 70%
+        @include mixin.justufy($tipo:center )
+        @include mixin.alignItm($direccion:column,$tipo:center )
+        gap: 1rem
+
+        input
+            width: 80%
+            padding: .5rem 1rem
+            border-radius: variables.$borde-comun
+            border: none
+            font-size: 16px
+            outline: none
+
+    .div-btn-form
+        @include mixin.justufy($tipo:center )
+
+        button
+            border-radius: variables.$borde-comun
+            height: 2.5rem
+            width: 40%
+            font-weight: bold
+            border: none
+            cursor: pointer
+            
+
+        
+        
+
+
+    
+    
+    
+
+    
+
+
