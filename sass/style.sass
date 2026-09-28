@@ -11,7 +11,7 @@
     // width: 100%
     background-color: variables.$color-madera
     color: variables.$miBlanco
-    text-shadow: variables.$shadow
+    text-shadow: -2px 2px 8px #000
 
 body
     height: 100dvh
@@ -56,27 +56,27 @@ main
     .estanteria
         height: 80%
         width: 100%
-        overflow-y: scroll
         @include mixin.flex($justify:center,$align:center)
 
         ul
-            padding: 2rem 1rem
+            padding: 2rem 8rem
             list-style: none
+            overflow-y: scroll
             width: 100%
             @include mixin.flex($justify:left)
             flex-wrap: wrap
-            gap: 2rem
-            height: 100%
+            gap: 5rem
+            height: 80%
 
             li
                 @include mixin.flex($direccion:column)
                 box-shadow: variables.$shadow
                 padding: 2rem
-                border-radius: variables.$borde-comun
+                // border-radius: variables.$borde-comun
                 gap: 1rem
-                width: 20%
-                height: 25rem
-                margin-left: 3rem
+                width: 33.33%
+                height: 22rem
+                // margin-left: 3rem
 
                 // span
                 //     width: 80%
@@ -96,7 +96,7 @@ main
                 btn-add
                     cursor: pointer
                     padding: .5rem
-                    border-radius: variables.$borde-comun/2
+                    border-radius: variables.$borde-comun
                     font-weight: bold
 
     #contador

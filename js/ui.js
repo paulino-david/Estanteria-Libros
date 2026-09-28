@@ -22,7 +22,7 @@ const crearItem=(libro,acciones)=>{
     const borrar=()=> acciones.borrar(libro.id)
 
     botones.append(
-        crearBoton(libro.leido?"Pendiente":"Leido",alternar),
+        crearBoton(!libro.leido?"Pendiente":"Leido",alternar),
         crearBoton("Borrar",borrar)
     )
     li.append(

@@ -40,7 +40,6 @@ form.addEventListener("submit", evento => {
         }, 4000)
         actualizar([...libros, crearLibro(titulo, autor)])
         form.reset()
-
     }
     else {
         msg.style.color = "red"
