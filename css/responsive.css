@@ -1,0 +1,105 @@
+@media only screen and (max-width: 480px) {
+  span, .divFormulario, .verLeidos {
+    display: none !important;
+  }
+  .menu {
+    display: flex !important;
+    font-size: x-large;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .here {
+    background-color: rgba(0, 0, 0, 0.1215686275);
+  }
+  .lista {
+    height: 80dvh !important;
+  }
+  .menuMovil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1254901961);
+    backdrop-filter: blur(1px);
+    width: 100%;
+    height: 100%;
+  }
+  .menuMovil .inmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    width: 70%;
+    background-color: #f5f5f5;
+    height: 100%;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1450980392);
+    gap: 1rem !important;
+  }
+  .menuMovil .inmenu ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .menuMovil .inmenu ol li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1215686275);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+    gap: 1rem;
+    font-size: large;
+  }
+  .menuMovil .cancelar {
+    padding: 1rem;
+    width: 30%;
+  }
+  .divFormula {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    display: flex;
+  }
+  .divFormula .buscar {
+    justify-content: start;
+  }
+  .divFormula .buscar i {
+    font-size: x-large;
+  }
+  .divFormula .buscar input, .divFormula .buscar .filtrar {
+    display: none;
+  }
+  .formularioMovil {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+  }
+  .estanteria {
+    width: auto !important;
+    height: 80%;
+  }
+  .estanteria ul {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+  }
+  .estanteria ul span {
+    display: flex !important;
+  }
+  .estanteria ul div {
+    width: 15rem;
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=responsive.css.map */

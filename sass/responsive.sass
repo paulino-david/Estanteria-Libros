@@ -1,0 +1,88 @@
+@use "variables"
+@use "mixin"
+
+@media only screen and (max-width: 480px)
+    span, .divFormulario, .verLeidos
+        display: none !important
+    .menu
+        display: flex !important
+        font-size: x-large
+
+
+    a
+        color: black
+        text-decoration: none
+
+    .here
+        background-color: variables.$hoverGris
+
+    .lista
+        height: 80dvh !important
+    .menuMovil
+        position: absolute
+        top: 0
+        left: 0
+        @include mixin.flex($justify: space-between)
+        display: none
+        background-color: #00000020
+        backdrop-filter: blur(1px)
+        width: 100%
+        height: 100%
+
+        .inmenu
+            @include mixin.flex($direccion: column)
+            width: 70%
+            background-color: variables.$miBlanco
+            height: 100%
+            box-shadow: variables.$shadow
+            gap: 1rem !important
+
+            ol
+                @include mixin.flex($direccion: column)
+                gap: 1rem
+                padding: .5rem
+                li
+                    border-bottom: solid 1px variables.$hoverGris
+                    padding: .5rem
+                    @include mixin.flex($align: center)
+                    gap: 1rem
+                    font-size: large
+
+        .cancelar
+            padding: 1rem
+            width: 30%
+        
+
+    .divFormula
+        @include mixin.flex($direccion: column)
+        display: flex
+
+        .buscar
+            justify-content: start
+            i
+                font-size: x-large
+            input, .filtrar
+                display: none 
+                
+    .formularioMovil
+        display: flex !important
+        width: 100%
+        height: 100%
+
+    .estanteria
+        width: auto !important
+        height:80%
+        ul
+            padding: 1rem
+
+            @include mixin.flex($justify:center)
+
+            span
+                display: flex !important
+            div
+                width: 15rem
+                gap: 2rem
+
+
+
+        

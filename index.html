@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <!-- Font letter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +15,19 @@
     />
 
     <!-- Font Icon -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>Document</title>
   </head>
@@ -24,51 +37,87 @@
     </div>
     <main>
       <div class="divEstanteria">
+        <div class="menuMovil" id="menuMovil">
+          <div class="inmenu animate__animated animate__slideInLeft">
+            <div class="upDesign">
+              <h2>eBooker</h2>
+            </div>
+
+            <ol>
+              <a href="">
+                <li class="here">
+                  Libros registrados <i class="fa-solid fa-layer-group"></i>
+                </li>
+              </a>
+              <a href="./html/formulario.html">
+                <li>Nuevo libro <i class="fa-solid fa-plus"></i></li>
+              </a>
+              <a href="">
+                <li>
+                  Ver libros leidos <i class="fa-solid fa-book-open-reader"></i>
+                </li>
+              </a>
+            </ol>
+          </div>
+
+          <div class="cancelar" id="cancelarMenu">
+            <!-- <i class="fa-solid fa-xmark"></i> -->
+          </div>
+        </div>
 
         <div class="buscar">
-          <input type="search" class="buscar" placeholder="Buscar por nombre">
+          <div class="menu filtrar" style="display: none" id="verMenu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <div class="filtrar verLeidos">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>Ver libros leidos</span>
+          </div>
+
+          <input
+            id="buscar"
+            type="search"
+            class="buscar"
+            placeholder="Buscar por titulo"
+          />
+
           <div class="filtrar" id="filtrar">
-            Filtrar <i class="fa-solid fa-filter"></i>
+            <i class="fa-solid fa-filter"></i>
+            <select name="" id="filtro">
+              <!-- <option value="" selected disabled>Filtrar</option> -->
+              <option value="titulo">Titulo</option>
+              <option value="autor">Autor</option>
+            </select>
+            <!-- Filtrar  -->
           </div>
         </div>
 
         <div class="estanteria" id="estanteria">
-          <ul id="lista">
-
-          </ul>
-
+          <ul id="lista"></ul>
         </div>
 
-          <div id="contador">
-
-          </div>
-
+        <div id="contador"></div>
       </div>
       <hr />
       <form action="" class="divFormulario" id="form-libro">
-
-        <div class="msg" id="msg">
-        </div>
+        <div class="msg" id="msg"></div>
 
         <div class="top">
-          <h2>
-            Registre su libro
-          </h2>
+          <h2>Registre su libro</h2>
           <p>
-            En esta seccion se registran los libros con sus titulos y sus autores
+            En esta seccion se registran los libros con sus titulos y sus
+            autores
           </p>
         </div>
 
         <div class="inputs">
-          <input type="text" id="titulo" placeholder="Titulo"/>
-          <input type="text" id="autor" placeholder="Autor"/>
+          <input type="text" id="titulo" placeholder="Titulo" />
+          <input type="text" id="autor" placeholder="Autor" />
         </div>
 
-        <button type="submit">
-          Añadir libro
-        </button>
+        <button type="submit">Añadir libro</button>
       </form>
-
     </main>
 
     <script type="module" src="./js/main.js"></script>

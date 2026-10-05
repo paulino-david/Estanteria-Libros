@@ -11,7 +11,7 @@ const crearBoton=(texto,alPulsar)=>{
 }
 
 const crearItem=(libro,acciones)=>{
-    const li=document.createElement("li")
+    const li=document.createElement("div")
     li.classList.toggle("leido",libro.leido)
     const book=document.createElement("book")
     const span=document.createElement("span")
