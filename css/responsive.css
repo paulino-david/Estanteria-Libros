@@ -86,7 +86,7 @@
   }
   .estanteria {
     width: auto !important;
-    height: 80%;
+    height: 77%;
   }
   .estanteria ul {
     padding: 1rem;
@@ -101,5 +101,30 @@
   .estanteria ul div {
     width: 15rem;
     gap: 2rem;
+  }
+  .buscar {
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+  .buscar input {
+    display: none;
+  }
+  #buscarMovil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    gap: 1rem;
+  }
+  #buscarMovil input {
+    display: flex !important;
+    height: 3rem;
+  }
+  #contador {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 2rem;
   }
 }/*# sourceMappingURL=responsive.css.map */

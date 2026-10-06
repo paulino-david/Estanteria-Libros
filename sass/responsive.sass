@@ -71,7 +71,7 @@
 
     .estanteria
         width: auto !important
-        height:80%
+        height:77%
         ul
             padding: 1rem
 
@@ -82,6 +82,28 @@
             div
                 width: 15rem
                 gap: 2rem
+    
+    .buscar
+        justify-content: space-between
+        margin: .5rem
+        input
+            display: none
+
+    #buscarMovil
+        @include mixin.flex($align:center,$justify:center)
+        display: flex !important
+        gap: 1rem
+
+        input
+            display: flex !important
+            height: 3rem
+
+    #contador
+        position: absolute
+        bottom: 0
+        background-color: white
+        height: 2rem
+
 
 
 

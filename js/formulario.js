@@ -14,6 +14,7 @@ const acciones = {
 const actualizar = (nuevos) => {
     libros = nuevos
     guardar(libros)
+    form.reset()
     pintar(libros)
 }
 
@@ -52,7 +53,6 @@ form.addEventListener("submit", evento => {
             msg.innerHTML = ``
         }, 4000)
         actualizar([...libros, crearLibro(titulo, autor)])
-        form.reset()
     }
     else {
         msg.style.color = "red"

@@ -25,17 +25,25 @@ const pintar = (libros) => {
 const form = document.getElementById("form-libro")
 const msg = document.getElementById("msg")
 const input_buscar= document.getElementById("buscar")
+const buscarMovil = document.getElementById("buscarMovilInput")
 const filtro= document.getElementById("filtro")
 const cancelarMenu = document.getElementById("cancelarMenu")
 const menuMovil = document.getElementById("menuMovil")
 const verMenu = document.getElementById("verMenu")
 
-filtro.addEventListener("click",()=>{
+filtro.addEventListener("click",(e)=>{
+    e.preventDefault()
+    console.log(filtro.value)
     input_buscar.placeholder=`Buscar por ${filtro.value}`
+    buscarMovil.placeholder= `Buscar por ${filtro.value}`
 })
 
 input_buscar.addEventListener("input",()=>{
     pintar(buscar(input_buscar.value,filtro.value))
+})
+
+buscarMovil.addEventListener("input",()=>{
+    pintar(buscar(buscarMovil.value,filtro.value))
 })
 
 form.addEventListener("submit", evento => {
